@@ -33,7 +33,18 @@ let brown = Color(hue: 38, saturation: 99, brightness: 38, alpha: 100)
 let lightRed = Color(hue: 10, saturation: 80, brightness: 80, alpha: 75)
 
 // Begin your solution here...
-
+//Write a function to draw the grid
+//Let y values go up by 50 starting at 0 ending at 600
+//Draw a grid for reference
+for y in stride(from: 0, through: 600, by: 50) {
+    
+    //Draw the lines
+    canvas.drawLine(from: Point(x: 0, y: y), to: Point(x: 400, y: y))
+}
+for x in stride(from: 0, through: 400, by: 50) {
+    //Do the same for the vertical lines
+    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
+}
 
 /*:
  ## Use Source Control
